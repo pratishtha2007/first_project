@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Validation Of Mobile,ATM No, Aadhar No</title>
+        
+    </head>
+    <body>
+        <input type="number" id="code">
+        <p id="msg"></p>
+        <script>
+            let bt=document.querySelector("#code");
+            let show=document.querySelector("#msg");
+            bt.addEventListener("keyup",()=>{
+                // if(bt.value.length==10){
+                //     show.innerText="Valid number";
+                //     show.style.color="green";
+                // }else{
+                //     show.innerText="Inavlid number";
+                //     show.style.color="red";
+                // }
+
+
+                // if(bt.value.length==16){
+                //      show.innerText="Valid ATM number";
+                //      show.style.color="green";
+                //  }else{
+                //     show.innerText="Inavlid ATM number";
+                //      show.style.color="red";
+                //  }
+                
+                 if(bt.value.length==12){
+                     show.innerText="Valid Aadhar number";
+                     show.style.color="green";
+                 }else{
+                    show.innerText="Inavlid Aadhar number";
+                     show.style.color="red";
+                 }
+                
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>First Program</title>
+        <link href="div.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outer">
+            <div class="box">Box1
+                <button onclick="classCall()">Btn1</button>
+            </div>
+            
+            <div class="box">Box2
+                <button onclick="classCall()">Btn2</button>
+            </div>
+            <div class="box">Box3
+                <button onclick="classCall()">Btn3</button>
+            </div>
+            
+        </div>
+        <script>
+             function classCall(){
+                const txt=document.getElementsByClassName("box");
+
+                const output=txt[1].innerHTML;
+                console.log(output);
+             }
+        </script>
+    </body>
+</html>

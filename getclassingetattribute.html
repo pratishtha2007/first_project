@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Get Class in Get attribute</title>
+        <style>
+            .para1{
+                background-color: red;
+            }
+           
+            .para{
+                color:blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="para" id="heading" >Techsima Solution Private Limited</p>
+      
+        <script>
+            let a=document.querySelector(".para");
+            // to get the value
+            // let attr=a.getAttribute("class");
+            // console.log(attr);
+
+            // to set the value
+            let set=a.setAttribute("class","para1");
+
+            // to get class name
+            let p=document.querySelector("p");
+            let get=p.className;
+            console.log(get);
+             
+            //to get id name
+            let i=document.querySelector("p").id;
+            console.log(i);
+            
+            
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

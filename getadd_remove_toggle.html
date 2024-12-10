@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Add Remove Toggle</title>
+        <style>
+            .box{
+                height:200px;
+                width:200px;
+                border:2px solid #000;
+            }
+            button{
+                margin-bottom: 10px;
+            }
+            .active{
+                height:200px;
+                width:200px;
+                background: red;
+                border:2px solid gold;
+                box-shadow: 0px 0px 10px #000 inset;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box add name"></div>
+        <button id="btn1">Add</button>
+        <br>
+        <button id="btn2">Remove</button>
+        <br>
+        <button id="btn3">Toggle</button>
+        <script>
+            let get=document.querySelector(".box");
+            let b1=document.querySelector("#btn1");
+            let b2=document.querySelector("#btn2");
+            let b3=document.querySelector("#btn3");
+            b1.addEventListener("click",()=>{
+                get.classList.add("active");
+            })
+            b2.addEventListener("click",()=>{
+                get.classList.remove("active");
+            })
+            b3.addEventListener("click",()=>{
+                get.classList.toggle("active");
+            })
+
+        </script>
+    </body>
+</html>

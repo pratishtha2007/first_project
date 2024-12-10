@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>On change event</title>
+        
+    </head>
+    <body>
+        <select id="sel" onchange="changedata()">
+            <option>CSS</option>
+            <option>HTML</option>
+            <option>Javascript</option>
+            <option>PHP</option>
+        </select>
+        <input type="text" id="set">
+        <script>
+            function changedata(){
+                let s=document.querySelector("#sel");
+                
+                let g=document.querySelector("#set");
+                g.value=s.value;
+            }
+        </script>
+    </body>
+</html>

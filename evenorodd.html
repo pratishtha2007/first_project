@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+        <div></div>
+        <script>
+            let evensum=0;
+            let oddsum=0;
+            for(let i=1; i<=100; i++){
+                if(i%2==0){
+                    document.write( "Even number:",i);
+                    document.write("<br>");
+                 evensum=evensum+i;
+                }
+                
+                 else{
+                    document.write("Odd number:",i);
+                    document.write("<br>");
+                    oddsum+=i;
+                 }
+            }
+            document.write("Even Number of sum is:"+evensum);
+            document.write("Odd Number of sum is :"+oddsum);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Get Image</title>
+        <style>
+           div{
+            height:400px;
+            width:400px;
+            border:3px solid #ff0;
+            margin: auto;
+
+           }
+           div img{
+                height: 100%;
+                width:100%;
+                object-fit: cover;
+           }
+        </style>
+    </head>
+    <body>
+        <div>
+        <img src="Images/krishn.png" id="image" alt="img">
+        
+        </div>
+        <button onclick="img()";>Get Image</button>
+        <script>
+            function img(){
+                const im=document.getElementById("image");
+                // const output= im.src;
+                im.src="Images/flower.jpg";
+            
+            }
+        </script> 
+    </body>
+</html>

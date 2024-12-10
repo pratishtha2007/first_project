@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Get Elements By Tag Name</title>
+        
+    </head>
+    <body>
+        <p>Techsima Solution Private Limited</p>
+        <p>Radhe Radhe</p>
+        <button onclick="Tagcall()">Click
+        </button>
+        <script>
+          function Tagcall(){
+            const txt=document.getElementsByTagName("p");
+            const output=txt[1].innerText;
+            console.log(output);
+          }
+        </script>
+    </body>
+</html>

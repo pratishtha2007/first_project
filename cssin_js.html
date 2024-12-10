@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>CSS in JS</title>
+        <style>
+           #box1{
+             height:200px;
+             width:200px;
+             border:2px solid #000;
+             background: yellow;
+             color:red;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="box1">Techsima Solution</div>
+        <button onclick="boxchange()">Change</button>
+        <script>
+            function boxchange(){
+                const bo=document.getElementById("box1"); 
+                 bo.style.height="400px";
+                 bo.style.width="400px";
+                 bo.style.background="red";
+                 bo.style.color="yellow";
+            }     
+        </script>
+    </body>
+</html>

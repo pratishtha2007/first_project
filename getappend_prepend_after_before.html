@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Append Prepend After Before</title>
+        <style>
+            #div{
+                height:300px;
+                width:300px;
+                border:2px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+            <ul>
+                <li>Ram</li>
+                <li>Shyam</li>
+                <li>Renu</li>
+            </ul>
+        </div>
+        <script>
+            let d=document.querySelector("#div");
+            let b=document.createElement("button");
+                b.innerText="Click me";    
+                //d.append(b)  
+               // d.prepend(b);  
+              // d.before(b); 
+              d.after(b);
+        </script>
+    </body>
+</html>

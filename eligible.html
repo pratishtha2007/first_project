@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        
+        <input id="number" type="text">
+        <p id="para"></p>
+        <button onclick="check()">Check</button>
+        <script>
+           function check(){
+                 let age=document.querySelector("#number");
+                 let show=document.querySelector("#para");
+                 if(age.value>=18){
+                    show.innerText=`eligible for vote:${age.value}`;
+                    alert(age);
+                 }
+                 else{
+                    show.innerText=`Not eligible for vote:${age.value }`;
+                 }
+           }
+        </script>
+    </body>
+</html>

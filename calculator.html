@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .outer{
+                height:600px;
+                width:500px;
+                border:2px solid #000;
+                margin:auto;
+                border-radius: 6px;
+                box-shadow:9px 16px 37px #000;
+            }
+            .upper{
+                height:150px;
+                width:498px;
+                border:2px solid #000;
+                background: #000;
+              
+            }
+            .upper-inner{
+                height:100px;
+                width:450px;
+                border:2px solid #000;
+                border-radius: 6px;
+                margin-top: 23px;
+                margin-left: 22px;
+                box-shadow:6px 6px 62px #13632b inset;
+                background: #000;
+                color:#fff;
+                font-size:80px;
+                text-align: right;
+            }
+            
+            .lower{
+                height:445px;
+                width:498px;
+                border:2px solid #000;
+                background: #000;
+                
+    
+            }
+             .inner{
+                height:72px;
+                width:107px;
+                float:left;
+                margin: 7px;
+                border: 2px solid #000;
+                background: #000;
+                box-shadow:-2px -2px 14px #fff inset ;
+                border-radius: 6px;
+                color:#fff;
+                text-align: center;
+                font-size: 35px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+           <div class="upper">
+            <input class="upper-inner" type="text" id="result">
+           </div>
+
+           <div class="lower">
+              <div class="inner" onclick="allclear()">AC</div>
+              <div class="inner" onclick="del()">Del</div>
+              <div class="inner" onclick="add(this)">%</div>
+              <div class="inner" onclick="add(this)">/</div>
+              <div class="inner" onclick="add(this)">7</div>
+              <div class="inner" onclick="add(this)">8</div>
+              <div class="inner" onclick="add(this)">9</div>
+              <div class="inner" onclick="add(this)">*</div>
+              <div class="inner" onclick="add(this)">4</div>
+              <div class="inner" onclick="add(this)">5</div>
+              <div class="inner" onclick="add(this)">6</div>
+              <div class="inner" onclick="add(this)">-</div>
+              <div class="inner" onclick="add(this)">1</div>
+              <div class="inner" onclick="add(this)">2</div>
+              <div class="inner" onclick="add(this)">3</div>
+              <div class="inner" onclick="add(this)">+</div>
+              <div class="inner" onclick="add(this)">00</div>
+              <div class="inner" onclick="add(this)">0</div>
+              <div class="inner" onclick="add(this)">.</div>
+              <div class="inner" onclick="equal()">=</div>
+           </div>
+        </div>
+        <script>
+            function add(x){
+                let a=document.querySelector("#result");
+                a.value+=x.innerText;  
+            }
+            function allclear(){    
+                let clear=document.querySelector("#result");
+                clear.value=" ";
+            }
+            function equal(){
+                let evalue=document.querySelector("#result").value;
+                let action=eval(evalue);
+                document.querySelector("#result").value=action;;
+            }
+            function del(){
+                let arr=document.querySelector("#result").value;
+                let delchar=" ";
+                    for(let i=0; i< arr.length-1; i++){
+                         delchar +=arr[i];
+                                          
+                   }
+                 document.querySelector('#result').value=delchar;
+                
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Slider</title>
+        <style>
+          #box{
+               height:400px;
+               width:400px;
+               border: 2px solid #000;
+               margin:auto;
+               position:relative;
+          }
+          #box2{
+            position:absolute;
+            height:400px;
+            width:400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:  lightsteelblue;
+            top:0px;
+            left:0px;
+          }
+          img{
+            height:400px;
+            width:400px;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="box2">
+            </div>
+            <img src="Images/flower.jpg" id="im" alt="img">
+        </div>
+        <script>
+          let arr=["flower.jpg","2.png","4.jpg","1.webp"];
+          let rgb=["rgba(23,23,245,0.2)","rgba(29,26,233,0.3)","rgba(2,3,421,0.5)","rgba(46,34,561,0.2)"];
+          let heading=["<h1>Sunflower</h1>","<h2>Red Flower</h2>","<h2>Bouquet</h2>","<h1>Butterfly</h1>"];
+          let bor=["5px solid yellow","5px solid pink","3px solid blue","5px solid grey"];
+          let i=0;
+          function demo(){
+            let image=document.querySelector("#im");
+            let bo=document.querySelector("#box2");
+            image.src=`Images/${arr[i]}`;
+            bo.style.background=rgb[i];
+            bo.style.border=bor[i];
+            bo.innerHTML=heading[i];
+            i++;
+             if(i==arr.length){
+                i=0;
+             }
+          }
+          window.setInterval("demo()",1000);
+        </script>
+    </body>
+</html>

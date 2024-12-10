@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Button</title>
+        
+    </head>
+    <body>
+        <input type= "checkbox" id="check" >
+        <input type="submit" value="disagree" id="btn" disabled>
+        <script>
+            let c= document.querySelector("#check");
+            let b=document.querySelector("#btn");
+
+            c.onchange=function(){
+                if(this.checked==true){
+                    b.disabled=false;
+                    b.value="agree";
+                }
+                else{
+                    b.disabled=true;
+                    b.value="disagree";
+                }
+            }
+        </script>
+    </body>
+</html>

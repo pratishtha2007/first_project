@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Text Wrap</title>
+        
+    </head>
+    <body>
+        <h1 id="t1">Techsima Solution</h1>
+        <h1 id="t2">Private Limited</h1>
+        <button onclick="wrap()">Wrap
+        </button>
+        <script>
+            function wrap(){
+                const txt1=document.getElementById("t1");
+                const txt2=document.getElementById("t2");
+                const t1=txt1.innerText;
+                const t2=txt2.innerText;
+                txt1.innerText = t2;
+                txt2.innerText = t1;
+            }
+        </script>
+    </body>
+</html>

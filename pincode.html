@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Pincode</title>
+        <style>
+            #pincode{
+                border:3px solid #000;
+                background: yellowgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="number" id="pincode">
+        <p id="msg"></p>
+        <script>
+            let  pc=document.querySelector("#pincode");
+            let m=document.querySelector("#msg");
+            // keyup=1-6
+            //keydown and keypress=0-5
+              
+            pc.addEventListener("keypress",()=>{
+                if(pc.value.length==5){
+                    m.innerText="valid pincode";
+                    m.style.color="green";
+                }else{
+                    m.innerText="invalid pincode";
+                    m.style.color="red";
+                }
+            })
+        </script>
+    </body>
+</html>

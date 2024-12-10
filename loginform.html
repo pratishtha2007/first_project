@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <title>Login form</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+        
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                box-sizing: border-box;
+            }
+            .outer{
+                 height: 534px;
+                width: 465px;
+                border:2px solid #7d54bf;
+                margin: auto;
+            }
+            .textcontainer{
+                height: 84px;
+                width: 214px;
+                border:2px solid #fff;
+                margin:auto;
+                padding-left:55px;
+            }
+            .container{
+                min-height: 240px;
+                width: 250px;
+                border:2px solid #fff;
+                margin:auto;
+                padding-left:17px;
+        
+            }
+            input{
+                height: 46px;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                width: 219px;
+                padding: 0px 0px 0px 30px;
+            }
+            .btn{
+                width:100%;
+                height:40px;
+                
+            }
+            .button{
+                border-radius: 10px;
+                background: #7d54bf;
+                color:#fff;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                width:80px;
+            }
+            .loginother{
+                height: 47px;
+                width: 200px;
+                margin: auto;
+            }
+            .other{
+                display: inline-block; 
+                position: relative;
+                padding-left: 41px;
+            }
+              .other::before, .other::after{
+                content: ''; 
+                position: absolute;
+                top: 50%;
+                width: 43px; 
+                height: 1px; 
+                background-color: black;
+                opacity:0.3;
+            }
+            .other::before {
+                 left: -5px; 
+           }
+
+           .other::after {
+                 right: -43px; 
+            }
+            .logingoogle{
+                height: 33px;
+                width: 226px;
+                margin: auto;
+                border: 2px solid #000;
+                text-align: center;
+                border-radius: 11px;
+                margin-bottom: 13px;
+                position: relative;
+                padding-top: 5px
+            }
+            .loginfacebook{
+                height: 33px;
+                width: 226px;
+                margin: auto;
+                border: 2px solid #000;
+                text-align: center;
+                border-radius: 11px;
+                margin-bottom: 13px;
+                position: relative;
+                padding-top: 5px
+            }
+            .input-type{
+                position: relative;
+            }
+
+            .input-type i{
+                position: absolute;
+                top:14px;
+                left:13px;
+            }
+            .pass_type{
+                position: relative;
+            }
+            .pass_type img{
+                position: absolute;
+                top:13px;
+                left:11px;
+                height:17px;
+            }
+            .fa-google{
+                background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                position: absolute;
+                left: 30px;
+                top: 7px;
+            }
+
+            .refresh{
+                min-height: 50px;
+                padding: 10px 10px;
+                display:flex ;
+                justify-content:space-between ;
+                align-items:center ;
+            }
+
+            .fa-arrows-rotate{
+                background: conic-gradient(from -45deg, #030058 110deg, #4285f4 90deg 180deg, #a1213b 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                font-size: 30px;
+            }
+            
+            .im1{
+                position: absolute;
+                height: 16px;
+                left: 19px
+            }
+            .open{
+                padding-left: 180px;
+                display:none;
+            }
+            .close{
+                padding-left: 180px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="outer"> 
+        <div class="textcontainer">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="container">
+            <form  action="#" onsubmit="checkCpt(event)">
+            <label for="uname"></label>
+            <div class="input-type">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="Username" >
+            </div>
+            
+         
+            &nbsp; &nbsp; &nbsp;&nbsp;
+            <div class="pass_type">
+                <label for="password"></label> 
+             <img src="Images/lock.png" alt="im" >
+             <img src="Images/close.png" alt="im" class="close">
+            <input type="password" placeholder="Password"  id="pass">
+            </div>
+            <div class="refresh">
+                <span id="result"></span>
+                <i class="fa-solid fa-arrows-rotate" id="ref"></i>
+            </div>
+              <input type="text" id="enter">
+              <p id="msg"></p>
+            <div class="btn">
+                <input type="submit" class="button">
+            </div>
+        </form>
+           
+        </div>
+        
+        <div class="loginother" >
+            <p class="other"><b>Login</b> With Others</p>
+        </div>
+        <div class="logingoogle">
+            <i class="fa-brands fa-google"></i>
+            <p class="google">Login with <b>google</b></p>
+        </div>
+        
+        <div class="loginfacebook">
+            <img src="Images/facebook.svg" alt="im1" class="im1">
+           <p class="face"> Login with <b>Facebook</b></p>
+        </div>
+       </div> 
+        <script>
+            let op=document.querySelector(".close");
+            let pa=document.querySelector("#pass"); 
+            op.addEventListener("click",()=>{
+                
+                if(pa.type=="password"){
+                    pa.type="text";
+                    op.src="Images/open.png"
+                }
+                else{
+                    pa.type="password";
+                    op.src="Images/close.png";
+                }
+            });
+
+            function gencap(){
+                let char="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                let cap=" ";
+                for(let i=0; i<=4;i++){
+                    cap +=char.charAt(Math.floor(Math.random()*char.length));
+                }
+                document.querySelector("#result").textContent=cap;
+
+                let ref = document.querySelector("#ref");
+                ref.addEventListener("click",()=>{
+                    document.querySelector("#result").textContent=" ";
+                    gencap();
+                })
+            }
+
+            function checkCpt(event){
+                event.preventDefault();
+                let entercpt=document.querySelector("#enter").value.trim();
+                let getcpt=document.querySelector("#result").textContent.trim();
+                let m=document.querySelector("#msg");
+                if(entercpt == ""){
+                    m.innerText = "Please enter the captcha";
+                    m.style.color = "red";
+                } else if(entercpt == getcpt){
+                    m.innerText="Verified";
+                    m.style.color="green";
+                }else{
+                    m.innerText="Not Verified";
+                    m.style.color="red";
+                }
+            }
+
+            gencap();
+        </script>
+    </body>
+</html>

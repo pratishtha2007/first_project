@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Bind Of ul and li</title>
+        
+    </head>
+    <body>
+        <p id="para"></p>
+         <!-- <button onclick="bind()">check</button> -->
+         <button onclick="sel()">check</button>
+        <script>
+        //   function bind(){
+        //     let setUl=document.querySelector("#para");
+        //     alert(setUl)
+        //     let arr=["Ram","Shyam","Mohan","Kushal"];
+        //     let res="<ul>";
+        //         for(i=0;i<=arr.length-1;i++){
+        //             res+=`<li> ${arr[i]} </li>`;
+        //         }
+        //         res+="</ul>";
+        //         setUl.innerHTML=res;
+        //  }
+        function sel(){
+            let setselect=document.querySelector("#para");
+            let arr=["Ram","Shyam","Mohan"];
+            let color=["red", "blue", "pink"];
+            let text=["black","white","blue"];
+            let res="<select>";
+                for(i=0;i<=arr.length-1;i++){
+                    res+=`<option style="background:${color[i]}; color:${text[i]}"> ${arr[i]} </option>`;
+                }
+                res+="</select>";
+                 setselect.innerHTML=res;   
+        }
+        </script>
+    </body>
+</html>

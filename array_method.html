@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Array Method</title>
+        
+    </head>
+    <body>
+        <div></div>
+        <script>
+            let arr=["Html","CSS","JS","jQuery","C","C++","Java","Phython"];
+            console.log(arr);
+
+            let p=arr.push("PHP");
+            console.log(p);
+
+            let po=arr.pop();
+            document.write(po);
+
+            let un=arr.unshift("C#");
+            document.write(un);
+
+            let sh=arr.shift();
+            document.write(sh);
+
+            let sl=arr.slice(2,5);
+            document.write(sl);
+
+            // let sp=arr.splice(4,2);
+            // document.write(sp);
+
+            let sp2=arr.splice(2,2,"Ram","Shyam");
+            document.write(sp2);
+
+            let arr1=["Ram","Shyam","Rahim"];
+             let arr2=["Ramu","Lalu","Rampukare"];
+           let co= arr1.concat(arr2);
+            document.write(co);
+
+            let st=arr.toString();
+            console.log(st);
+            document.write(st);
+            document.write("<br>");
+
+            let a=arr.at(2);
+            document.write(a);
+
+            let fi=arr.find("C++");
+            document.write(fi);
+        </script>
+    </body>
+</html>

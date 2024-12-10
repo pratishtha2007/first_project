@@ -1,0 +1,62 @@
+ <html>
+    <head>
+        <title>Bulb</title>
+        <style>
+            .box1{
+                height:300px;
+                width:300px;
+                border:2px solid #fff;
+                margin:auto;
+            }
+           .box1 #im1{ 
+                height:300px;
+                width:300px;
+                box-shadow :3px 20px 117px yellow inset;
+                
+            }
+            #im2{
+                display:none;
+                height:300px;
+                width:300px;
+               
+            }
+            #btn{
+                margin:auto;
+                display: block;
+                background-color: green;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+         <img src="Images/off.png" id="im1">
+        <img src="Images/on.png" id="im2" >
+        </div> 
+         <input type="submit" value="ON" onclick="onOff()" id="btn">
+        <script>
+          function onOff(){
+            const img1=document.getElementById("im1");
+        
+            const img2=document.getElementById("im2");
+           
+            let b=document.getElementById("btn");
+            if(b.value=="ON"){
+                img1.src="Images/on.png";
+                b.value="OFF";
+                b.style.backgroundColor="red";
+                img1.style.display="block";
+                img2.style.display="none";
+              }
+            else{
+                img2.src="Images/off.png";
+                b.value="ON";
+                b.style.backgroundColor="green";
+                img2.style.display="block";
+                img1.style.display="none";
+            }
+             
+          }
+        </script>
+    </body>
+ </html>
